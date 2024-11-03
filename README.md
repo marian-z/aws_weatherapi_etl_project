@@ -18,14 +18,17 @@ This project is designed to extract weather data from the OpenWeatherMap API and
 4. Set up an IAM role with appropriate permissions for the EC2 instance.
 5. Create a virtual environment and install dependencies:
 
-sudo apt update
-sudo apt install python3-pip
-sudo apt install python3.10-venv
-python3 -m venv airflow_venv
-pip install pandas s3fs apache-airflow awscli boto3
+   sudo apt update
+   sudo apt install python3-pip
+   sudo apt install python3.10-venv
+   python3 -m venv airflow_venv
+   pip install pandas s3fs apache-airflow awscli boto3
 
 # Code Implementation
 The main logic resides in weather_dag.py, where:
-DAG Definition: Configures tasks for checking API availability, extracting weather data, and transforming/loading the data into S3.
-Data Transformation: Converts temperature from Kelvin to Celsius and structures the data into a DataFrame for storage.
+DAG Definition: 
+Configures tasks for checking API availability, extracting weather data, and transforming/loading the data into S3.
+Data Transformation: 
+Converts temperature from Kelvin to Celsius and structures the data into a DataFrame for storage.
+
 For further details, please refer to the code in the weather_dag.py file.
